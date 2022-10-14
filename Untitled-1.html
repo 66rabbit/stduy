@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var age = prompt('请输入您的年龄');
+        // var str = '您今年已经' + age + '岁了';
+        // alert(str)
+
+        // var a = '红苹果';
+
+        // var age = prompt('请输入您出生的年份');
+        // var nf = 2022 - age;bb
+        // alert('您今年已经' + nf + '岁了');
+
+        // var age = prompt('请输入您的姓名');
+        // var bcd = prompt('请输入您的年龄');
+        // var efg = prompt('请输入您的性别');
+        // // var str = "'您的姓名是' + age + '\n'您今年已经' + age + '岁了'\n '您的性别是''+ efg +'";
+        // alert('你的姓名是:' + age + '\n你的年龄:' + bcd + '\n你的性别:' + efg);
+        // console.log(0.1+0.2);
+
+        // var a = 10;
+        // ++a;  //a = 11
+        // var b = ++a + 2; //++a = ++11 = 12 再加上2,b的值是14 
+        // console.log(b);
+
+        // var c = 10;
+        // c++;//c = 11;
+        // var d = c++ + 2; // c = 11 , 11++ + 2 ,11加加变成12再加上2,b的值是14
+        // console.log(d);aa
+
+        // var e = 10;
+        // var f = e++ + ++e 
+        // console.log(f);
+        // 1.第一步e++先返回原数值所以 e++ = 10
+        // 而e++ = 10计算完成之后,这时候的e就要再自加1
+        // 所以这时候的e就变成了11, e = 11  但是f值的第一个条件
+        // 并不是需要 e = 11的值,而是e++ = 10的数值,所以第一步e++ = 10计算完成
+        // 2.第二步是计算++e的数值,因为在上一步的计算中e的数值已经变成了11
+        // 所以第二步是计算e变成11之后的数值 , 因为此时的e = 11
+        // 又因为++e = ++11,所以最后++e的值等于12
+        // 最后合并第一步和第二步的值  f = 10 + 12 = 22;
+
+        // console.log(123 && 456);
+        // var num = 0;
+        // console.log(123 || num++);//123
+        // console.log(num);// 0
+        // var num = 10;
+        // num += 5
+        // console.log(num);
+        // var bcd = prompt('请输入您的年龄');
+        // if (bcd >= 18) {
+        //     alert(bcd + '岁可以进入网吧'); 
+        // }else{
+        //     alert(bcd + '岁不可以进入网吧')
+        // }
+
+        // 能被4整除且不能被100整除,能被400整除。或者能被4整除但不能被100整除   用到 && 和 取余数
+        // var year = prompt('请输入当前年份');
+
+        // if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        //      alert(year + '年是闰年');
+        //  }else{
+        //      alert(year + '年是平年');
+        //  }
+
+        // var name = ('刘德华')
+
+        // var inputa = prompt('请输入您的姓名')
+
+        // if (inputa == name) {
+        //     alert('恭喜您中奖五元');
+        // } else {
+        //     alert('很遗憾您没有中奖');
+        // }
+        // var num = prompt('请输入您的分数');
+        // if (num >= 90) {
+        //     alert('A');
+        // } else if(num >= 80 && num != 90) {
+        //     alert('B');
+        // } else if(num >= 70 && num != 80) {
+        //     alert('C');
+        // } else if(num >= 60 && num != 70) {
+        //     alert('D');
+        // } else if(num < 60 ) {
+        //     alert('E');
+        // }
+
+        // var num = prompt('请输入数值')
+        // var time = num < 10 ?  '0' + num : num ;
+        // console.log(time);
+
+        // var fruit = prompt('请输入您要查询的水果')
+
+        // switch (fruit) {
+        //     case ('苹果'):
+        //         alert('苹果10元一斤');
+        //         break;
+
+        //     case ('香蕉'):
+        //         alert('香蕉10元一斤');
+        //         break;
+
+        //     case ('葡萄'):
+        //         alert('葡萄10元一斤');
+        //         break;
+
+        //     default:    
+        //         alert('没有这种水果的价格');
+        //         break;
+        // }
+
+        //  1.分支语句课后作业 
+        // 1.判断时间阶段。比如用户输入12点弹出中午好用户输入18点弹出傍晚好用户输入23点弹出深夜好
+        //  var time = prompt('请输入当前时间')
+
+        //  if (time == '12') {
+        //     alert('中午好')
+        //  } else if (time == '18') {
+        //     alert('傍晚好')
+        //  } else if (time == '23'){
+        //     alert('深夜好')
+        //  } 
+
+        // 2.比较两个数的最大值（用户依次输入2个值，最后弹出最大的那个值)
+        // var a = prompt('请输入第一个值')
+
+        // var b = prompt('请输入第二个值')
+
+        // if (a > b) {
+        //     alert( a );
+        // } else if (a < b) {
+        //     alert( b );
+        // }
+
+
+
+
+        //  3.用户输入一个数，来判断是奇数还是偶数
+        //   var num = prompt('请输入想查询的数值')
+
+        //   if (num % 2 == 0) {
+        //     alert('这个数值是偶数');
+        //   } else if (num % 2 != 0) {
+        //     alert('这个数值是奇数');
+        //   }
+
+
+
+
+
+
+
+        // 4.根据用户输入的数值（ 数字1到数字7 ) ，返回星期几
+
+        // var day = prompt('请输入变量')
+
+        // switch (day) {
+        //     case '1':
+        //         alert('今天是星期一')
+        //         break;
+        //     case '2':
+        //         alert('今天是星期二')
+        //         break;
+        //     case '3':
+        //         alert('今天是星期三')
+        //         break;
+        //     case '4':
+        //         alert('今天是星期四')
+        //         break;
+        //     case '5':
+        //         alert('今天是星期五')
+        //         break;
+        //     case '6':
+        //         alert('今天是星期六')
+        //         break;
+        //     case '日':
+        //         alert('今天是星期日')
+        //         break;
+        // }
+
+        // 5.接收班长口袋里的钱数?若大于等于2000,请大家吃西餐。若小于2000,大于等于1500,请大家吃快餐。
+        //   若小于1500,大于等于1000,请大家喝饮料。若小于1000,大于等于500,请大家吃棒棒糖。否则提醒班长下次把钱带够.
+
+        // var money = prompt('班长你带了多少钱')
+
+        // if (money >= 2000) {
+        //     alert('请大家吃西餐')
+        // } else if (money < 2000 && money >= 1500) {
+        //     alert('请大家吃快餐')
+        // } else if (money < 1500 && money >= 1000) {
+        //     alert('请大家喝饮料')
+        // } else if (money < 1500 && money >= 500) {
+        //     alert('请大家吃棒棒糖')
+        // } else {
+        //     alert('下次把钱带够')
+        // }
+
+        // var num = prompt('请输入变量值')
+
+        // for (var i = 1; i<=num; i++) {
+        //     console.log('猪头力');
+        // }
+
+        // for (i = 1 ; i<=100; i++) {
+        //     if (i == 1) {
+        //         console.log('这个人出生了,他今年一岁了');
+        //     } else if (i == 100) {
+        //         console.log('这个人今年100岁了,他去世了');
+        //     } else {
+        //         console.log('这个人今年'+i+'了');
+        //     }
+
+        // }
+
+
+        //  var sum = 0 ; //求和的变量
+
+        //  for (var i = 1; i<=100; i++) {
+        //     sum = sum + i//或者也可以写成 sum += 
+        //  }
+        //  console.log('所以一加到一百的整数累加和是'+sum+'');
+
+
+        // var sum = 0 ;
+        // var average = 0 ;
+
+        // for (var i = 1; i <= 100; i++) {
+        //     sum = sum + i        
+        // }
+
+        // average = sum / 100;
+
+        // console.log(' 1 到 100 之间整数的累加和的平均值是'+average+'');
+
+
+
+        // 一到一百之间偶数的和
+        // var even = 0;
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % 2 == 0) {
+        //         even = even + i
+        //     }
+        // }  
+        // console.log(even);
+
+        // // 一到一百之间奇数的和
+        // var odd = 0;
+
+        // for(var i = 1; i <= 100; i++){
+        //     if (i % 2 != 0) {
+        //         odd = odd  + i
+        //     }
+        // }
+        // console.log(odd);
+
+        // // 求 1 到 100 之间 所有能被 3 整除的数字的和
+        // var num = 0;
+
+        // for (var i = 1; i <= 100; i++) {
+        //     if(i % 3 == 0){
+        //         num = num +i
+        //     }
+        // }
+        // console.log(num);//1683
+
+
+
+        // var num = prompt('请输入班级总人数')
+        // var sum = 0; //总成绩
+        // var average = 0; //平均成绩
+
+        // for (var i = 1; i <= num; i++) {
+        //    var scroe = prompt('请输入第'+i+'个学生的成绩')
+        //     sum = sum + parseFloat(scroe)//这里需要使用parseFloat转化成字符型
+        // }
+        // average = sum / num
+
+        // alert('班级总成绩是' + sum ) 
+        // alert('班级平均分是' + average)
+
+
+
+
+        // var num = '';
+
+        // var sum = prompt('请输入要打印多少行星星')
+
+        // var cum = prompt('请输入一行要打印多少颗星星')
+
+        // for(var i = 1; i <= sum; i++){//外层for循环负责打印五行
+        //     for (var j =1; j <= cum; j++){//里层for循环负责一行打印五个星星
+        //         num = num + '★';
+        //     }
+        //     num = num + '\n';//如果不加换行则会一行打印25颗星星,加了\n之后每一行打印五颗星星之后则会换行打印
+        // }
+        // console.log(num);
+
+
+        // 正三角形打印方法一:
+        // var num = '';
+
+        // for(var i = 0; i <= 9; i++){
+        //     for (var j = 9 - i; j <= 9; j++){
+        //         num = num + '★';
+        //     }
+        //     num = num + '\n';
+        // }
+        // console.log(num);
+
+        // 正三角形打印方法二:
+        // var num = '';
+
+        // for(var i = 1; i <= 9; i++){
+        //     for (var j = 1; j <= i; j++){
+        //         num += '★'
+        //     }
+        //     num = num + '\n';
+        // }
+        // console.log(num);
+
+
+
+
+
+        // var str = '';
+
+
+        // for(var i = 1; i <= 10; i++){
+        //     for(var j = i; j <= 10; j++){
+        //         str = str + '★'
+        //     }
+        //     str = str + '\n';
+        // }
+
+        // alert(str)
+
+        // (1) 第一轮会从外层for循环开始,外层for循环第一步从var i = 1 开始,然后到下一步 i<=10; 中检测i是否
+        // 小于等于 10,如果<=10 就会打印出第一行;然后跳转到var j = i 此时的 i=1,然后继续到下一步检测
+        // j = i = 1 是否 <=10,如果 <= 10,那么就会打印出第一行中的的一颗星星,然后随着 j++ 的不断变化增加
+        // j = i = 1 也在从初始值 1 慢慢增加 等j的数值 = 10 的时候,这个时候的第一行已经打印了 10 颗星星
+        // 紧接着 j 的数值继续增加,增加到 11 的时候,再继续和 j<=10 比较 然后发现 11 已经不 <= 10,然后跳转到
+        // 外层for循环的循环体把换行指令打印出,自此外层for循环和里层for循环,第一轮结束.
+
+        // (2)第二轮会从第一轮的换行指令结束后直接跳转到外层for循环的 i++ 之后 i的值会从 1 增加为 2 再继续和
+        // i<=10进行比较,接下来的流程和第一轮一样.... 直到到了第二轮里层for循环之中的var j = i = 2 这里开始和
+        // 第一轮不一样,这也是打印倒直角三角形算法的精髓所在,因为 var j = i = 2 一直会通过 j++ 自增到 11 ,
+        // 这会比第一轮的 var j = i = 1 一直自增到 11 少循环一轮,那也就是说第二行的星星也会比第一行的星星
+        // 少打印一颗,所以第二行的星星只会有 9 颗, 再然后随着外层for循环 i 自增的数值越来越大,那么里层的for循环
+        // 也会从少打印一颗逐渐变成少打印两颗,三颗,四颗,直到结束,一个到倒立的直角三角形就会被打印出来.
+
+
+        // 打印九九乘法表
+
+        // var num = '';
+
+        // for(var i = 1; i <= 9; i++){
+        //     for (var j = 1; j <= i; j++){
+        //         num += j + 'x' + i + '=' + j * i + '\t'
+        //     }
+        //     num = num + '\n';
+        // }
+        // console.log(num);
+
+        // var i = 1
+
+        // while (i <= 10) {
+        //     console.log('你好');
+        //     i++;
+        // }
+
+        // var i = 1;
+
+        // while (i <= 100) {
+        //     console.log('这个人今年'+ i +'岁了')
+        //     i++;
+        // }
+
+        // var i = 1;
+        // var sum = 0;
+
+        // while (i <= 100) {
+        //     sum = sum + i;
+        //     i++;
+        // }
+        // console.log('一到一百之间的累加和是'+ sum +'');
+
+        // var i = 1;
+
+        // while (i <= 100) {
+        //     console.log('这个人今年'+ i +'岁了');
+        //     i++
+        // }
+
+        // var i = 1;
+        // var j = 0;
+
+        // while (i <= 100) {
+        //     j = j + i;
+        //     i++
+        // }
+        // console.log(j);
+
+        // var i = prompt('你爱我吗')
+
+        // while (i  !== '我爱你') {
+        //    var i = prompt('你爱我吗')
+
+        // }
+        // alert('我也爱你')
+
+        // var i = 1;
+        // do {
+        //     console.log('你好');
+        //     i++
+        // } while (i <= 100);
+
+
+        // var i = 1;
+
+        // do {
+        //     console.log('这个人今年'+ i +'岁了');
+        //     i++
+        // } while (i <= 100);
+
+
+        // var i = 1;
+        // var j = 0;
+
+        // do {
+        //     j = j + i;
+        //     i++
+
+        // } while (i <= 100);
+        // console.log(j);
+
+
+
+        // do {
+        //   var i = prompt('你爱我吗?')
+        // } while (i !== '我爱你' || i !== '爱');
+
+        // alert('我也爱你')
+
+
+        // var arr = ['关羽','张飞','马超','赵云','黄忠','刘备','姜维'];
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+
+
+
+        // var arr = [2,6,1,7,4];
+
+        // var sum = 0;
+
+        // var average = 0;
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     sum = sum + arr[i];
+        //     average = sum / arr.length;
+
+        // }
+
+        // console.log(sum,average);
+
+
+        // 案例: 求数组[2,6,1,77,52,25,7] 中的最大值.
+
+        // var arr = [2,6,1,77,52,25,7];
+
+        // var max = arr[0];
+
+
+        // for (var i = 1; i < arr.length; i++) {
+        //     if (arr[i]  > max ) {
+        //         max = arr[i];
+        //     }
+        // }
+
+        // console.log('这个数组中的最大值是'+ max);
+
+
+        // 将数组['red','green','blue','pink'] 转化为字符串,并且用|符号分割
+
+        // 输出为 'red|green|blue|pink|'
+
+        // var arr = ['red','green','blue','pink'];
+
+        // function getsum(sum1,sum2) {
+        //     var sum = 0;
+        //     for (var i = sum1; i <= sum2; i++){
+        //         sum = sum + i
+        //     }
+        //     console.log(sum);
+        // }
+
+        // getsum(1,100)
+
+
+        // var a = prompt('请输入要查询的初始值');
+        // var b = prompt('请输入结束值');
+
+        // for (var i = 101; i <= 200; i++) {
+        //     for (var j = 2; j <= i; j++) {
+        //         if (i % j == 0) {
+        //             if (i != j) {
+        //                 beark;
+        //             } else {
+        //                 console.log(i);
+        //                 break;
+        //             }
+        //         }
+        //     }
+
+        // }
+
+
+        // console.time('global')
+        // var start = prompt('请输入要查询的初始值');
+        // var end = prompt('请输入结束值');
+
+
+        // for (var i = 1; i <= 100; i++) {
+        //     for (var j = 2; j <= i; j++) {
+        //         if (j != i && i % j == 0) {
+        //             break;
+        //         }
+        //         if (j == i) {
+        //             console.log(i);
+
+        //         }
+        //     }
+        // }
+        // console.timeEnd('global')
+
+
+        // var max = Number(prompt('请输入结束值'));
+        // var results = []
+        // if (max > 1) {
+        //     for (var i = 2; i <= max; i++) {
+        //         for (var j = 2; j <= i; j++) {
+        //             if (j != i && i % j == 0) { //&& j != 1
+        //                 break;
+        //             }
+        //             if (j == i) {
+        //                 results.push(i);
+        //             }
+        //         }
+        //     }
+        //     console.log(max + '以内的质数有' + results.length + '个，分别是：' + results);
+        // } else if (max === 1) {
+        //     alert('1既不是质数也不是合数')
+        // } else {
+        //     alert('输入错误')
+        // }
+
+
+        // console.time('global')
+        
+        // for (var i = 2; i < 10000; i++) {
+        //     var flag = true;
+        //     for (var j = 2; j < i; j++) {
+        //         if (i % j == 0) {
+        //             flag = false;
+        //         }
+        //     }
+        //     if (flag == true) {
+        //         console.log(i);
+        //     }
+        // }
+        // console.timeEnd('global')
+
+
+
+        // function getSum(num1,num2) {
+        //    return num1 + num2;
+        // }
+        // console.log(getSum(1,2));
+
+
+
+        // 案例: 利用函数的方法求任意一个数组中的最大值
+
+        //     求数组[5,2,99,101,67,77]中的最大值.
+
+        //     var arr = [5,97,67,77,99,999];
+
+        //     function getmax(arr) {
+        //         var max = arr[0];
+        //         for (var i = 0; i < arr.length; i++) {
+        //             if (arr[i] > max) {
+        //                 max = arr[i];
+                        
+        //             }
+        //         }
+        //         return max
+
+        //     }
+        //     console.log('这个数组中的最大值是' + getmax(arr));
+
+        //     function  getresult(num1,num2) {
+        //         return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+        //     }
+        //     var re = getresult(1,2,);
+        //     console.log(re);
+
+
+
+        //     案例: 新建一个数组, 里面存放了10个整数(1 ~ 10).
+                                       
+        //          核心原理: 使用循环来追加数组
+        //          1. 声明一个空的数组 arr.
+        //          2. 循环中的计数器 i 可以作为数组元素存入.
+        //          3. 由于数组的索引号是从0开始的,因此计数器从 0 开始更合适,存入的数组元素要 +1.
+
+        //          var arr = [];
+
+        //          for (var i = 0; i < 10; i++) {
+        //             arr[i] = i;
+        //          }
+        //          console.log(arr);
+
+        //         将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来,放入新数组.
+
+        //         var arr = [2,0,6,1,77,0,52,0,25,7];
+                
+        //         var end = [];
+
+        //         var j = 0;
+        //         for (var i = 0; i < arr.length; i++) {
+        //             if (arr[i] >= 10) {
+        //                 end[j] = arr[i];
+        //                 j++;
+        //             }
+        //         }
+
+        //         console.log(end);
+
+
+        //         var arr = [2,0,6,1,77,0,52,0,25,7];
+        //         var newarr = [];
+        //         for (var i = 0; i < arr.length; i++) {
+        //             if (arr[i] != 0) {
+        //                 newarr[newarr.length] = arr[i];
+        //             }
+        //         }
+        //         console.log(newarr);
+
+
+        //         var arr = ['red', 'green', 'blue', 'pink', ' purple'];
+
+        //         var newarr = [];
+
+        //         for (var i = arr.length - 1; i >= 0; i--) {
+        //              newarr[newarr.length] = arr[i];
+                    
+        //         }
+        //         console.log(newarr);
+
+
+        //         var apple1 = '青苹果';
+        //         var apple2 = '红苹果';
+        //         var temp;
+
+        //         temp = apple1;
+        //         apple1 = apple2;
+        //         apple2 = temp;
+
+        //         console.log(apple1,apple2);
+        //         console.log(apple2);
+
+        //         function getmax() {
+        //             var max = arguments[0];
+        //             for (var i = 1; i < arguments.length; i++) {
+        //                 if (arguments[i] > max) {
+        //                     max = arguments[i];
+        //                 }
+                        
+        //             }
+        //             return max;                                                     
+        //         }
+
+        //         console.log(getmax(6, 9, 45, 453453, 453, 45153));
+        //         console.log(getmax(55491, 14820, 535, 41533, 53151));
+
+        //         案例: 用户输入年份,输出当前年份2月份的天数.
+                
+        //         如果是闰年,则2月份输出的是29天,如果是平年,则2月份输出的是28天
+
+        //         var year = prompt();
+
+        //         function isrunyear(year) {
+        //             var flag = (year + '年是平年,所以2月份的天数是28天');
+        //             if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        //                 flag = (year + '年是闰年所以2月份的天数是29天');
+        //             }
+        //             return flag;
+        //         }
+        //         document.write(isrunyear(year));
+
+        //         var fun = function(aru) {
+        //             console.log('我是函数表达式');
+        //             console.log(aru);
+        //         }
+        //         fun('pink老师')
+
+
+        console.log();
+        document.write();
+        var num = 10
+                
+
+
+
+                
+                
+
+
+
+
+    </script>
+
+</body>
+
+</html>
